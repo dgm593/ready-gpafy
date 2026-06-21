@@ -15,19 +15,19 @@ export default function manifest(): MetadataRoute.Manifest {
       {
         src: 'https://picsum.photos/seed/gpafy_app_192/192/192',
         sizes: '192x192',
-        type: 'image/png',
+        type: 'image/jpeg',
         purpose: 'maskable',
       },
       {
         src: 'https://picsum.photos/seed/gpafy_app_192/192/192',
         sizes: '192x192',
-        type: 'image/png',
+        type: 'image/jpeg',
         purpose: 'any',
       },
       {
         src: 'https://picsum.photos/seed/gpafy_app_512/512/512',
         sizes: '512x512',
-        type: 'image/png',
+        type: 'image/jpeg',
         purpose: 'any',
       },
     ],
