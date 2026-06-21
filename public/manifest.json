@@ -1,0 +1,22 @@
+{
+  "name": "JU GPA System",
+  "short_name": "JU GPA",
+  "description": "Academic Companion for Jimma University Students",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#006633",
+  "theme_color": "#006633",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/ju-icon/192/192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://picsum.photos/seed/ju-icon/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

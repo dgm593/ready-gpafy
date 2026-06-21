@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 99%; /* Slate-tinted off-white #F8FAFC */
+    --foreground: 0 0% 11%;     /* Dark Charcoal #1C1C1C */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+    --primary: 45 65% 40%;    /* Luxury Golden #B8860B */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 65% 50%;   /* Polished Amber Gold #D4AF37 */
+    --secondary-foreground: 0 0% 11%;
+    --muted: 210 10% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 45 65% 50%;
+    --accent-foreground: 0 0% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 45 65% 40%;
+    --radius: 1.25rem;
+  }
+  .dark {
+    --background: 210 7% 10%; /* Near-black charcoal #16181A */
+    --foreground: 210 40% 98%;
+    --card: 210 7% 13%;       /* Dark gray #1F2320 variant */
+    --card-foreground: 210 40% 98%;
+    --popover: 210 7% 13%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 45 65% 55%;    /* Brighter Luxury Gold for Dark Mode */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 65% 50%;
+    --secondary-foreground: 0 0% 11%;
+    --muted: 217 32% 12%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 45 65% 50%;
+    --accent-foreground: 0 0% 11%;
+    --border: 217 32% 15%;
+    --input: 217 32% 15%;
+    --ring: 45 65% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  html, body {
+    @apply h-full;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    user-select: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-body tracking-tight font-bold;
+  }
+}
+
+.active-scale {
+  @apply transition-transform duration-200 active:scale-[0.96];
+}
+
+.liquid-glass {
+  @apply bg-background/40 backdrop-blur-[24px] border-t border-white/20 dark:border-white/5;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Smooth Slider Thumb for Mobile */
+[role="slider"] {
+  @apply shadow-lg border-2 border-primary;
+}
+
+/* Progress Bar Animation */
+@keyframes progress-animation {
+  from { width: 0; }
+  to { width: var(--progress-width); }
+}
+
+.progress-fill {
+  animation: progress-animation 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}

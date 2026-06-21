@@ -1,0 +1,11 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-academic",
+      "description": "Student studying at a modern university campus",
+      "imageUrl": "https://picsum.photos/seed/ju1/800/400",
+      "imageHint": "university study"
+    }
+  ]
+}
